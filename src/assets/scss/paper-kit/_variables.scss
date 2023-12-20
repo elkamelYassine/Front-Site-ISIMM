@@ -38,7 +38,7 @@ $default-color:              #66615B !default;
 $default-bg:                 #66615B !default;
 $default-states-color:       #403D39 !default;
 
-$primary-color:              #51cbce !default;
+$primary-color:              #144587 !default;
 $primary-states-color:       darken($primary-color, 10%) !default;
 
 $success-color:              #6bd098 !default;
@@ -136,7 +136,7 @@ $font-size-medium:             16px !default;
 $font-size-large:              20px !default;
 $font-size-large-navbar:       22px !default;
 
-$font-size-h1:                 3.6em !default;
+$font-size-h1:                 4.3em !default;
 $font-size-h2:                 2.8em !default;
 $font-size-h3:                 1.825em !default;
 $font-size-h4:                 1.6em !default;
@@ -176,8 +176,8 @@ $transition-linear:                                   linear !default;
 $transition-bezier:         cubic-bezier(0.34, 1.61, 0.7, 1) !default;
 $transition-ease:           ease 0s;
 
-$navbar-padding-a:               10px 15px;
-$navbar-margin-a:                15px  3px;
+$navbar-padding-a:               20px 70px;
+$navbar-margin-a:                10px  3px;
 
 $padding-social-a:               10px  5px;
 
