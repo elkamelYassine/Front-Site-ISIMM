@@ -1,9 +1,27 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  LeafIcon,
+} from "react-leaflet";
 import "leaflet/dist/leaflet.css"; // Import the Leaflet CSS
 import { Container } from "reactstrap";
+import L from "leaflet";
+
 const MapComponent = () => {
   const center = [35.76440286851841, 10.840828573030606]; // Initial map center
+
+  const myIcon = L.icon({
+    iconUrl: require("leaflet/images/marker-icon.png"),
+    iconSize: [24, 40],
+    iconAnchor: [16, 32],
+    popupAnchor: null,
+    shadowUrl: require("leaflet/images/marker-shadow.png"),
+    shadowSize: null,
+    shadowAnchor: null,
+  });
 
   const markers = [
     {
@@ -33,7 +51,7 @@ const MapComponent = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               />
-              <Marker position={position}>
+              <Marker position={position} icon={myIcon}>
                 <Popup>ISIMM location</Popup>
               </Marker>
             </MapContainer>
