@@ -16,7 +16,7 @@ import {
   Container,
 } from "reactstrap";
 import PropTypes from "prop-types";
-function IndexNavbar({ changeColor }) {
+function IndexNavbar({ changeColor, color }) {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
@@ -94,11 +94,12 @@ function IndexNavbar({ changeColor }) {
   };
 
   React.useEffect(() => {
-    if (!changeColor) setNavbarColor("");
+    if (!changeColor) setNavbarColor({ color });
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 299 ||
-        document.body.scrollTop > 299
+        (document.documentElement.scrollTop > 299 ||
+          document.body.scrollTop > 299) &&
+        changeColor
       ) {
         setNavbarColor("");
       } else if (
@@ -426,6 +427,7 @@ function IndexNavbar({ changeColor }) {
   );
   IndexNavbar.prototype = {
     changeColor: PropTypes.bool.isRequired,
+    color: PropTypes.string,
   };
 }
 

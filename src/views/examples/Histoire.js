@@ -16,7 +16,7 @@ const Histoire = () => {
   });
   return (
     <>
-      <IndexNavbar changeColor={false} />
+      <IndexNavbar changeColor={false} color="" />
 
       <div className="main">
         <br />

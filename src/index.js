@@ -28,7 +28,7 @@ root.render(
       <Route path="/nucleo-icons" element={<NucleoIcons />} />
       <Route path="/landing-page" element={<LandingPage />} />
       <Route path="/profile-page" element={<ProfilePage />} />
-      <Route path="/register-page" element={<RegisterPage />} />
+      <Route path="/login" element={<RegisterPage />} />
       <Route path="/Histoire" element={<Histoire />} />
 
       <Route path="*" element={<PageNotFound />} />
