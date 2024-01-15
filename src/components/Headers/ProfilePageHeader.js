@@ -1,4 +1,3 @@
-
 import React from "react";
 
 // reactstrap components
@@ -26,8 +25,7 @@ function ProfilePageHeader() {
     <>
       <div
         style={{
-          backgroundImage:
-            "url(" + require("assets/img/fabio-mangione.jpg") + ")",
+          backgroundImage: "url(" + require("assets/img/etudiant.jpg") + ")",
         }}
         className="page-header page-header-xs"
         data-parallax={true}
