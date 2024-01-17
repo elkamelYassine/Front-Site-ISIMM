@@ -1,5 +1,5 @@
 import React from "react";
-
+import imageHeader from "assets/img/etudiant.jpg";
 // reactstrap components
 
 // core components
@@ -20,7 +20,6 @@ function ProfilePageHeader() {
       };
     }
   });
-
   return (
     <>
       <div

@@ -5,21 +5,20 @@ import { Link } from "react-router-dom";
 import { Container, Row } from "reactstrap";
 const CardApropos = () => {
   const data =
-    "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.";
+    "L'Institut Supérieur d'Informatique et de Mathématiques de l’Université de Monastir (ISIMM) est créé par le décret n° 1623 du 09 juillet 2002, est un établissement d’enseignement supérieur scientifique, public.";
   return (
     <>
       <div className="section">
         <Container>
           <div className="title">
             <h2>
-              <Row>About Isimm</Row>
+              <Row>A propos Isimm</Row>
             </h2>
           </div>
           <Link to={"/histoire"}>
             <Card>
               <CardImg
                 top
-                className="Meduim-Image"
                 src={Apropos}
                 alt="Apropos"
               ></CardImg>

@@ -19,10 +19,14 @@ import {
 // core components
 import ConnectedNavbar from "components/Navbars/ConnectedNavbar.js";
 import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
+import SectionCards from "views/index-sections/SectionCards.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
-
+import imageSource from "assets/img/user.png";
+import imageHeader from "assets/img/etudiant.jpg";
 function ProfilePage() {
   const [activeTab, setActiveTab] = React.useState("1");
+  const NameEtudiant = "Yassine EL Kamel";
+  const Niveau = "ING INFO 1";
 
   const toggle = (tab) => {
     if (activeTab !== tab) {
@@ -48,88 +52,23 @@ function ProfilePage() {
               <img
                 alt="..."
                 className="img-circle img-no-padding img-responsive"
-                src={require("assets/img/user.png")}
+                src={imageSource}
               />
             </div>
             <div className="name">
-              <h4 className="title">
-                Yassine EL Kamel <br />
-              </h4>
+              <h4 className="title">{NameEtudiant}</h4>
+              <h5>{Niveau}</h5>
               <h6 className="description">Etudiant</h6>
             </div>
           </div>
-          <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>ING INFO 1</p>
-              <br />
-              <Button className="btn-round" color="default" outline>
-                 Settings
-              </Button>
-              <Button className="btn-round" color="default" outline>
-                Notification
-              </Button>
-              <Button className="btn-round" color="default" outline>
-                Emploi
-              </Button>
 
-              <Button className="btn-round" color="default" outline>
-                Feuille administrative  
-              </Button>
-
-            </Col>
-          </Row>
+          <SectionCards />
           <br />
-        
         </Container>
       </div>
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <DemoFooter />
     </>
   );

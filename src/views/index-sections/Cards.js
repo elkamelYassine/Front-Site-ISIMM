@@ -14,8 +14,8 @@ import PropTypes from "prop-types";
 const Cards = ({ title, description, imageSrc, link }) => {
   return (
     <>
-      <Card style={{ width: "20rem" }}>
-        <CardImg top src={imageSrc} alt={title} />
+      <Card style={{ width: "20rem", marginLeft: "40px" }}>
+        <CardImg top src={imageSrc} alt={title} className="images-card" />
         <CardBody>
           <CardTitle>{title}</CardTitle>
           <CardText>{description}</CardText>

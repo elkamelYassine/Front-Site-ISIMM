@@ -43,7 +43,7 @@ function DemoFooter() {
             <span className="copyright">© {new Date().getFullYear()} </span>
           </div>
         </Row>
-        <Row>Created by Yassine EL Kamel Nour EL Houda Salem</Row>
+        <Row>Created by Yassine EL Kamel & Nour EL Houda Salem</Row>
       </Container>
     </footer>
   );

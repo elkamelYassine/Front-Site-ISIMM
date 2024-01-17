@@ -17,7 +17,6 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 function IndexNavbar({ changeColor, color }) {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
@@ -92,9 +91,11 @@ function IndexNavbar({ changeColor, color }) {
     setDirection("down");
     document.documentElement.classList.toggle("nav-open");
   };
+  if (changeColor) color = "navbar-transparent";
+
+  const [navbarColor, setNavbarColor] = React.useState(color);
 
   React.useEffect(() => {
-    if (!changeColor) setNavbarColor({ color });
     const updateNavbarColor = () => {
       if (
         (document.documentElement.scrollTop > 299 ||

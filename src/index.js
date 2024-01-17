@@ -15,7 +15,8 @@ import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import Histoire from "views/examples/Histoire.js";
 import PageNotFound from "views/examples/PageNotFound.js";
-
+import Emploi from "views/ConnectedPages/Emploi";
+import Settings from "views/ConnectedPages/Settings";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -27,9 +28,12 @@ root.render(
       <Route path="/index" element={<Index />} />
       <Route path="/nucleo-icons" element={<NucleoIcons />} />
       <Route path="/landing-page" element={<LandingPage />} />
-      <Route path="/profile-page" element={<ProfilePage />} />
       <Route path="/login" element={<RegisterPage />} />
       <Route path="/Histoire" element={<Histoire />} />
+
+      <Route path="/etudiant" element={<ProfilePage />} />
+      <Route path="/etudiant/emploi" element={<Emploi />} />
+      <Route path="/etudiant/settings" element={<Settings />} />
 
       <Route path="*" element={<PageNotFound />} />
     </Routes>

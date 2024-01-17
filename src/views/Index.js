@@ -10,7 +10,7 @@ import CardApropos from "./index-sections/CardApropos";
 // index sections
 import MapComponent from "views/index-sections/MapComponent.js";
 import SectionCards from "views/index-sections/SectionCards.js";
-
+import { Row, Col, Container } from "reactstrap";
 function Index() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -25,15 +25,19 @@ function Index() {
       <IndexHeader />
       <div className="main">
         <br />
-        <br />
-        <MapComponent />
-        <br />
-        <br />
         <SectionCards />
         <br />
         <br />
-
-        <CardApropos />
+        <Container id="menu-dropdown">
+          <Row>
+            <Col md="5" lg="6" sm="6">
+              <CardApropos />
+            </Col>
+            <Col md="6" lg="6" sm="6">
+              <MapComponent />
+            </Col>
+          </Row>
+        </Container>
         <br />
         <br />
         <br />
@@ -41,7 +45,6 @@ function Index() {
 
         <br />
         <br />
-        <span>s</span>
 
         <DemoFooter />
       </div>
