@@ -18,77 +18,12 @@ import {
 import PropTypes from "prop-types";
 function IndexNavbar({ changeColor, color }) {
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
-
-  const [dropdownOpen, setDropdownOpen] = React.useState(false);
-  const [dropdownOpen2, setDropdownOpen2] = React.useState(false);
-  const [dropdownOpen3, setDropdownOpen3] = React.useState(false);
-  const [dropdownOpen4, setDropdownOpen4] = React.useState(false);
-  const [dropdownOpen5, setDropdownOpen5] = React.useState(false);
   const [direction, setDirection] = React.useState("right");
-
-  const toggle = () => {
-    setDropdownOpen((prevState) => !prevState);
-  };
-
-  const onMouseEnter = () => {
-    setDropdownOpen(true);
-  };
-
-  const onMouseLeave = () => {
-    setDropdownOpen(false);
-  };
-
-  const toggle2 = () => {
-    setDropdownOpen2((prevState) => !prevState);
-  };
-
-  const onMouseEnter2 = () => {
-    setDropdownOpen2(true);
-  };
-
-  const onMouseLeave2 = () => {
-    setDropdownOpen2(false);
-  };
-
-  const toggle3 = () => {
-    setDropdownOpen3((prevState) => !prevState);
-  };
-
-  const onMouseEnter3 = () => {
-    setDropdownOpen3(true);
-  };
-
-  const onMouseLeave3 = () => {
-    setDropdownOpen3(false);
-  };
-
-  const toggle4 = () => {
-    setDropdownOpen4((prevState) => !prevState);
-  };
-
-  const onMouseEnter4 = () => {
-    setDropdownOpen4(true);
-  };
-
-  const onMouseLeave4 = () => {
-    setDropdownOpen4(false);
-  };
-
-  const toggle5 = () => {
-    setDropdownOpen5((prevState) => !prevState);
-  };
-
-  const onMouseEnter5 = () => {
-    setDropdownOpen5(true);
-  };
-
-  const onMouseLeave5 = () => {
-    setDropdownOpen5(false);
-  };
-
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
-    setDirection("down");
+    if (direction == "right") setDirection("down");
+    else setDirection("right");
+
     document.documentElement.classList.toggle("nav-open");
   };
   if (changeColor) color = "navbar-transparent";
@@ -148,246 +83,105 @@ function IndexNavbar({ changeColor, color }) {
           <Collapse navbar isOpen={navbarCollapse}>
             <Nav navbar>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle
-                  caret
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  id="dropdownMenuButton"
-                  nav
-                  onClick={(e) => e.preventDefault()}
-                  role="button"
-                >
+                <DropdownToggle nav caret>
                   Institut
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>
-                    <UncontrolledDropdown
-                      direction={direction}
-                      onMouseOver={onMouseEnter}
-                      onMouseLeave={onMouseLeave}
-                      isOpen={dropdownOpen}
-                      toggle={toggle}
-                    >
-                      <DropdownToggle
-                        caret
-                        className="btn-link"
-                        color="default"
-                        size="lg"
-                        aria-expanded={false}
-                        aria-haspopup={true}
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        ISIMM
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <Link to={"/histoire"}>
-                          <DropdownItem>Histoire</DropdownItem>
-                        </Link>
-                        <DropdownItem>
-                          <UncontrolledDropdown
-                            direction={direction}
-                            onMouseOver={onMouseEnter5}
-                            onMouseLeave={onMouseLeave5}
-                            isOpen={dropdownOpen5}
-                            toggle={toggle5}
-                          >
-                            <DropdownToggle
-                              caret
-                              className="btn-link"
-                              color="default"
-                              size="sm"
-                              aria-expanded={false}
-                              aria-haspopup={true}
-                              href="#pablo"
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              Equipe
-                            </DropdownToggle>
-                            <DropdownMenu>
-                              <DropdownItem>Conseil scientifique</DropdownItem>
-                              <DropdownItem>Departements</DropdownItem>
-                              <DropdownItem>Centre 4C</DropdownItem>
-                              <DropdownItem>Comité de qualité</DropdownItem>
-                            </DropdownMenu>
-                          </UncontrolledDropdown>
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </DropdownItem>
+                  <UncontrolledDropdown nav inNavbar direction={direction}>
+                    <DropdownToggle nav caret size="lg" >
+                      ISIMM
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <Link to={"/histoire"}>
+                        <DropdownItem>Histoire</DropdownItem>
+                      </Link>
+                      <UncontrolledDropdown nav inNavbar>
+                        <DropdownToggle caret nav>
+                          Equipe
+                        </DropdownToggle>
+                        <DropdownMenu>
+                          <DropdownItem>Conseil scientifique</DropdownItem>
+                          <DropdownItem>Departements</DropdownItem>
+                          <DropdownItem>Centre 4C</DropdownItem>
+                          <DropdownItem>Comité de qualité</DropdownItem>
+                        </DropdownMenu>
+                      </UncontrolledDropdown>
+                      {/* Add more ISIMM items as needed */}
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
 
-                  <DropdownItem>
-                    <UncontrolledDropdown
-                      direction={direction}
-                      onMouseOver={onMouseEnter2}
-                      onMouseLeave={onMouseLeave2}
-                      isOpen={dropdownOpen2}
-                      toggle={toggle2}
-                    >
-                      <DropdownToggle
-                        caret
-                        aria-expanded={false}
-                        aria-haspopup={true}
-                        className="btn-link"
-                        color="default"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        Vie étudiant
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem>Foyers</DropdownItem>
-                        <DropdownItem>Restauration</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </DropdownItem>
+                  <UncontrolledDropdown nav inNavbar direction={direction}>
+                    <DropdownToggle caret nav size="lg">
+                      Vie étudiant
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem>Foyers</DropdownItem>
+                      <DropdownItem>Restauration</DropdownItem>
+                      {/* Add more ISIMM items as needed */}
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
 
-                  <DropdownItem>
-                    <UncontrolledDropdown
-                      direction={direction}
-                      onMouseOver={onMouseEnter3}
-                      onMouseLeave={onMouseLeave3}
-                      isOpen={dropdownOpen3}
-                      toggle={toggle3}
-                    >
-                      <DropdownToggle
-                        caret
-                        aria-expanded={false}
-                        aria-haspopup={true}
-                        className="btn-link"
-                        color="default"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        Vie association
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem>Associations</DropdownItem>
-                        <DropdownItem>Clubs</DropdownItem>
-                        <DropdownItem>Activités</DropdownItem>
-                        <DropdownItem>Evenements</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </DropdownItem>
+                  <UncontrolledDropdown nav inNavbar direction={direction}>
+                    <DropdownToggle caret nav size="lg">
+                      Vie Association
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem>Associations</DropdownItem>
+                      <DropdownItem>Clubs</DropdownItem>
+                      <DropdownItem>Activités</DropdownItem>
+                      <DropdownItem>Evenements</DropdownItem>
+                      {/* Add more ISIMM items as needed */}
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
 
-                  <DropdownItem>
-                    <UncontrolledDropdown
-                      direction={direction}
-                      onMouseOver={onMouseEnter4}
-                      onMouseLeave={onMouseLeave4}
-                      isOpen={dropdownOpen4}
-                      toggle={toggle4}
-                    >
-                      <DropdownToggle
-                        caret
-                        aria-expanded={false}
-                        aria-haspopup={true}
-                        className="btn-link"
-                        color="default"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        International
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem>Programme de mobilité</DropdownItem>
-                        <DropdownItem>Stage à l'éxterieur</DropdownItem>
-                        <DropdownItem>Partenaire Internationaux</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </DropdownItem>
+                  <UncontrolledDropdown nav inNavbar direction={direction}>
+                    <DropdownToggle caret nav size="lg">
+                      International
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem>Programme de mobilité</DropdownItem>
+                      <DropdownItem>Stage à l'éxterieur</DropdownItem>
+                      <DropdownItem>Partenaire internationaux</DropdownItem>
+
+                      {/* Add more ISIMM items as needed */}
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
                   <DropdownItem>Consultation et offres</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
 
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle
-                  caret
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  id="dropdownMenuButton"
-                  nav
-                  onClick={(e) => e.preventDefault()}
-                  role="button"
-                >
+                <DropdownToggle nav caret>
                   Formation
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>
-                    <UncontrolledDropdown
-                      direction={direction}
-                      onMouseOver={onMouseEnter}
-                      onMouseLeave={onMouseLeave}
-                      isOpen={dropdownOpen}
-                      toggle={toggle}
-                    >
-                      <DropdownToggle
-                        caret
-                        className="btn-link"
-                        color="default"
-                        size="lg"
-                        aria-expanded={false}
-                        aria-haspopup={true}
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        Cycle Ingenieur
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem>Informatique</DropdownItem>
-                        <DropdownItem>Electronique</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </DropdownItem>
-
-                  <DropdownItem>
-                    <UncontrolledDropdown
-                      direction={direction}
-                      onMouseOver={onMouseEnter2}
-                      onMouseLeave={onMouseLeave2}
-                      isOpen={dropdownOpen2}
-                      toggle={toggle2}
-                    >
-                      <DropdownToggle
-                        caret
-                        aria-expanded={false}
-                        aria-haspopup={true}
-                        className="btn-link"
-                        color="default"
-                        href="#pablo"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        Master
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem>Master1</DropdownItem>
-                        <DropdownItem>Master2 ...</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
-                  </DropdownItem>
+                  <UncontrolledDropdown nav inNavbar direction={direction}>
+                    <DropdownToggle caret nav size="lg">
+                      Cycle Ingenieur
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem>Informatique</DropdownItem>
+                      <DropdownItem>Electronique</DropdownItem>
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
+                  <UncontrolledDropdown nav inNavbar direction={direction}>
+                    <DropdownToggle caret nav>
+                      Master
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem>Master1 ...</DropdownItem>
+                      <DropdownItem>Master2 ...</DropdownItem>
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
+                  {/* Add more ISIMM items as needed */}
 
                   <DropdownItem>Cycle préparatoire</DropdownItem>
-
                   <DropdownItem>Licence</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
 
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle
-                  caret
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  id="dropdownMenuButton"
-                  nav
-                  onClick={(e) => e.preventDefault()}
-                  role="button"
-                >
+                <DropdownToggle nav caret>
                   Recherche
                 </DropdownToggle>
                 <DropdownMenu>
@@ -398,17 +192,7 @@ function IndexNavbar({ changeColor, color }) {
               </UncontrolledDropdown>
 
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle
-                  caret
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  id="dropdownMenuButton"
-                  nav
-                  onClick={(e) => e.preventDefault()}
-                  role="button"
-                >
+                <DropdownToggle nav caret>
                   Entreprise
                 </DropdownToggle>
                 <DropdownMenu>
