@@ -53,6 +53,7 @@ function IndexNavbar({ changeColor, color }) {
       window.removeEventListener("scroll", updateNavbarColor);
     };
   });
+
   return (
     <StrictMode>
       <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
