@@ -101,7 +101,9 @@ function IndexNavbar({ changeColor, color }) {
                         </DropdownToggle>
                         <DropdownMenu>
                           <DropdownItem>Conseil scientifique</DropdownItem>
-                          <DropdownItem>Departements</DropdownItem>
+                          <Link to={"/Departement"}>
+                            <DropdownItem>Departements</DropdownItem>
+                          </Link>
                           <DropdownItem>Centre 4C</DropdownItem>
                           <DropdownItem>Comité de qualité</DropdownItem>
                         </DropdownMenu>

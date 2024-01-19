@@ -17,6 +17,11 @@ import Histoire from "views/examples/Histoire.js";
 import PageNotFound from "views/examples/PageNotFound.js";
 import Emploi from "views/ConnectedPages/Emploi";
 import Settings from "views/ConnectedPages/Settings";
+
+import Departement from "views/examples/Departement";
+import DepInfo from "views/examples/DepInfo";
+import DepMath from "views/examples/DepMath";
+import DepTech from "views/examples/DepTech";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -30,6 +35,10 @@ root.render(
       <Route path="/landing-page" element={<LandingPage />} />
       <Route path="/login" element={<RegisterPage />} />
       <Route path="/Histoire" element={<Histoire />} />
+      <Route path="/Departement" element={<Departement />} />
+      <Route path="/DepInfo" element={<DepInfo />} />
+      <Route path="/DepMath" element={<DepMath />} />
+      <Route path="/DepTech" element={<DepTech />} />
 
       <Route path="/etudiant" element={<ProfilePage />} />
       <Route path="/etudiant/emploi" element={<Emploi />} />
