@@ -88,7 +88,7 @@ function IndexNavbar({ changeColor, color }) {
                 </DropdownToggle>
                 <DropdownMenu>
                   <UncontrolledDropdown nav inNavbar direction={direction}>
-                    <DropdownToggle nav caret size="lg" >
+                    <DropdownToggle nav caret size="lg">
                       ISIMM
                     </DropdownToggle>
                     <DropdownMenu>
@@ -130,7 +130,6 @@ function IndexNavbar({ changeColor, color }) {
                       <DropdownItem>Clubs</DropdownItem>
                       <DropdownItem>Activités</DropdownItem>
                       <DropdownItem>Evenements</DropdownItem>
-                      {/* Add more ISIMM items as needed */}
                     </DropdownMenu>
                   </UncontrolledDropdown>
 

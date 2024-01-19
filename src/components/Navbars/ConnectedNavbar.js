@@ -17,7 +17,7 @@ import {
   Container,
 } from "reactstrap";
 import PropTypes from "prop-types";
-function IndexNavbar({ changeColor, color }) {
+function ConnectedNavbar({ changeColor, color }) {
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
   const [direction, setDirection] = React.useState("right");
@@ -198,10 +198,10 @@ function IndexNavbar({ changeColor, color }) {
       </Navbar>
     </StrictMode>
   );
-  IndexNavbar.prototype = {
+  ConnectedNavbar.prototype = {
     changeColor: PropTypes.bool.isRequired,
     color: PropTypes.string,
   };
 }
 
-export default IndexNavbar;
+export default ConnectedNavbar;
