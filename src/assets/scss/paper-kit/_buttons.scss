@@ -131,6 +131,30 @@
         @include opacity(.5);
     }
 }
+
+.btn-nav{
+    line-height: 1.6;
+    margin: $navbar-margin-a;
+    padding: $navbar-padding-a;
+    opacity: .8;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $white-color;
+    margin: $navbar-margin-a-btn;
+    padding: 9px;
+    p {
+      margin: 0px 0px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.5em;
+      padding: 15px 0;
+    }
+ }
+
+
+
 .btn-link{
     border-color: transparent !important;
     padding: $padding-base-vertical $padding-base-horizontal;

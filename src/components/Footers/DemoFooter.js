@@ -1,26 +1,11 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 /*eslint-disable*/
 import React from "react";
+import LinkedInLogo from "assets/img/LinkedInLogo-Grey-Small.png";
+import FacebookLogo from "assets/img/FacebookLogo-Grey-Small.png";
+import WikipediaLogo from "assets/img/WikipediaLogo-Grey-Small.png";
 
 // reactstrap components
-import { Row, Container } from "reactstrap";
+import { Row, Container, Button } from "reactstrap";
 
 function DemoFooter() {
   return (
@@ -29,39 +14,36 @@ function DemoFooter() {
         <Row>
           <nav className="footer-nav">
             <ul>
-              <li>
-                <a
-                  href="https://www.creative-tim.com?ref=pkr-footer"
-                  target="_blank"
-                >
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://blog.creative-tim.com/?ref=pkr-footer"
-                  target="_blank"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.creative-tim.com/license?ref=pkr-footer"
-                  target="_blank"
-                >
-                  Licenses
-                </a>
-              </li>
+              Suivez nous :
+              <Button
+                className="btn-link"
+                href="https://www.facebook.com/profile.php?id=100063489403806"
+                title="Like us on Facebook"
+              >
+                <img src={FacebookLogo} />
+              </Button>
+              <Button
+                className="btn-link"
+                href="https://www.linkedin.com/school/isimm/mycompany/"
+                title="Follow us on LinkedIn"
+              >
+                <img src={LinkedInLogo} />
+              </Button>
+              <Button
+                className="btn-link"
+                href="https://fr.wikipedia.org/wiki/Institut_sup%C3%A9rieur_d%27informatique_et_de_math%C3%A9matiques_de_Monastir"
+                title="Read about in wikipedia"
+              >
+                <img src={WikipediaLogo} />
+              </Button>
             </ul>
           </nav>
           <div className="credits ml-auto">
-            <span className="copyright">
-              © {new Date().getFullYear()}, made with{" "}
-              <i className="fa fa-heart heart" /> by Creative Tim
-            </span>
+            copyright
+            <span className="copyright">© {new Date().getFullYear()} </span>
           </div>
         </Row>
+        <Row>Created by Yassine EL Kamel & Nour EL Houda Salem</Row>
       </Container>
     </footer>
   );

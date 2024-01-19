@@ -49,7 +49,7 @@
 
     img{
         max-width: 100%;
-        height: auto;
+       
         border-radius: $border-radius-extreme $border-radius-extreme 0 0;
     }
 
@@ -551,4 +551,11 @@
   .panel-title {
       font-size: 1em;
   }
+
+
+}
+.card-actualite {
+    width: "20rem";
+   
+
 }
