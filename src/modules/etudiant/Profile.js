@@ -17,13 +17,13 @@ import {
 } from "reactstrap";
 
 // core components
-import ConnectedNavbar from "components/Navbars/ConnectedNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
+import ConnectedNavbar from "modules/etudiant/Navbars/ConnectedNavbar.js";
+import ProfilePageHeader from "./Headers/ProfilePageHeader.js";
 import SectionCards from "views/index-sections/SectionCards.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import imageSource from "assets/img/user.png";
 import imageHeader from "assets/img/etudiant.jpg";
-function ProfilePage() {
+function Profile() {
   const [activeTab, setActiveTab] = React.useState("1");
   const NameEtudiant = "Yassine EL Kamel";
   const Niveau = "ING INFO 1";
@@ -74,4 +74,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default Profile;

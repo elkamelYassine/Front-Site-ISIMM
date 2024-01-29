@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
+import Loadable from "react-loadable";
 
 // styles
 import "bootstrap/scss/bootstrap.scss";
@@ -11,12 +12,9 @@ import "assets/demo/demo.css?v=1.3.0";
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import Histoire from "views/examples/Histoire.js";
 import PageNotFound from "views/examples/PageNotFound.js";
-import Emploi from "views/ConnectedPages/Emploi";
-import Settings from "views/ConnectedPages/Settings";
 
 import Departement from "views/examples/Departement";
 import DepInfo from "views/examples/DepInfo";
@@ -25,6 +23,11 @@ import DepTech from "views/examples/DepTech";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const loading = <div>loading ...</div>;
+const Etudiant = Loadable({
+  loader: () => import(/* webpackChunkName: "etudiant" */ "modules/etudiant"),
+  loading: () => loading,
+});
 
 root.render(
   <BrowserRouter>
@@ -40,9 +43,7 @@ root.render(
       <Route path="/DepMath" element={<DepMath />} />
       <Route path="/DepTech" element={<DepTech />} />
 
-      <Route path="/etudiant" element={<ProfilePage />} />
-      <Route path="/etudiant/emploi" element={<Emploi />} />
-      <Route path="/etudiant/settings" element={<Settings />} />
+      <Route path="/etudiant/*" element={<Etudiant />} />
 
       <Route path="*" element={<PageNotFound />} />
     </Routes>

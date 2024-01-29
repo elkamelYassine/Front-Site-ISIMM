@@ -17,8 +17,7 @@ import {
 } from "reactstrap";
 
 // core components
-import ConnectedNavbar from "components/Navbars/ConnectedNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
+import ConnectedNavbar from "modules/etudiant/Navbars/ConnectedNavbar.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import imageSource from "assets/img/user.png";
 function Settings() {
