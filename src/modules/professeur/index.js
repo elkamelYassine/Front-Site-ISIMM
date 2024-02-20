@@ -10,16 +10,9 @@ import useToken from "config/useToken";
 import RegisterPage from "views/examples/RegisterPage";
 
 const ProfessuerRoutes = () => {
-  /* const { setToken, isEtudiant } = useToken();*/
-  /*const [loggedIn, setLoggedIn] = useState(isEtudiant());
-  React.useEffect(() => {
-    if (!loggedIn && token) destroyToken();
-  });
-  if (!loggedIn) {
-    return <RegisterPage setToken={setToken} />;
-  }*/
+  const { saveToken, isProfesseur } = useToken();
 
-  //  if (!isProfesseur()) return <RegisterPage setToken={setToken} />;
+  if (!isProfesseur()) return <RegisterPage saveToken={saveToken} />;
 
   return (
     <Routes>

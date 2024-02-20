@@ -17,7 +17,7 @@ async function LoginUser(credentials) {
   }).then((data) => data.json());
 }
 
-function RegisterPage({ setToken }) {
+function RegisterPage({ saveToken }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -36,7 +36,7 @@ function RegisterPage({ setToken }) {
       password,
     });
     console.log(token);
-    setToken(token);
+    saveToken(token);
   };
 
   //  const handleLogin = () => {};
@@ -105,6 +105,6 @@ function RegisterPage({ setToken }) {
   );
 }
 RegisterPage.propTypes = {
-  setToken: PropTypes.func.isRequired,
+  saveToken: PropTypes.func.isRequired,
 };
 export default RegisterPage;
