@@ -9,7 +9,7 @@ import RegisterPage from "views/examples/RegisterPage";
 import EtudiantNavbar from "modules/etudiant/Navbars/EtudiantNavbar.js";
 
 const EtudiantRoutes = () => {
-  const { setToken, isEtudiant } = useToken();
+  const { saveToken, isEtudiant } = useToken();
   /*const [loggedIn, setLoggedIn] = useState(isEtudiant());
   React.useEffect(() => {
     if (!loggedIn && token) destroyToken();
@@ -18,7 +18,7 @@ const EtudiantRoutes = () => {
     return <RegisterPage setToken={setToken} />;
   }*/
 
-   if (!isEtudiant()) return <RegisterPage setToken={setToken} />;
+   if (!isEtudiant()) return <RegisterPage saveToken={saveToken} />;
 
   return (
     <Routes>

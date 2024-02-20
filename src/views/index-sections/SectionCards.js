@@ -1,11 +1,8 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
 import Cards from "views/index-sections/Cards.js";
-import img from "assets/img/avatar.jpg";
-import img2 from "assets/img/daniel-olahh.jpg";
 import tree from "assets/img/cards/tree.jpg";
 import biblio from "assets/img/cards/biblio.jpg";
-import court from "assets/img/cards/court.jpg";
 import court2 from "assets/img/cards/court2.jpg";
 import salle from "assets/img/cards/salle.jpg";
 const SectionCards = () => {
