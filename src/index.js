@@ -1,48 +1,60 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
+import Loadable from "react-loadable";
 
 // styles
 import "bootstrap/scss/bootstrap.scss";
 import "assets/scss/paper-kit.scss?v=1.3.0";
 import "assets/demo/demo.css?v=1.3.0";
 // pages
+
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
+import Histoire from "views/examples/Histoire.js";
+import PageNotFound from "views/examples/PageNotFound.js";
+
+import Departement from "views/examples/Departement";
+import DepInfo from "views/examples/DepInfo";
+import DepMath from "views/examples/DepMath";
+import DepTech from "views/examples/DepTech";
+import Formationdepinfo from "views/examples/Formationdepinfo";
+import Formationdepmath from "views/examples/Formationdepmath";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const loading = <div>loading ...</div>;
+const Etudiant = Loadable({
+  loader: () => import(/* webpackChunkName: "etudiant" */ "modules/etudiant"),
+  loading: () => loading,
+});
+const Professeur = Loadable({
+  loader: () => import(/* webpackChunkName: "etudiant" */ "modules/professeur"),
+  loading: () => loading,
+});
 
 root.render(
   <BrowserRouter>
     <Routes>
+      <Route path="/" element={<Index />} />
       <Route path="/index" element={<Index />} />
       <Route path="/nucleo-icons" element={<NucleoIcons />} />
       <Route path="/landing-page" element={<LandingPage />} />
-      <Route path="/profile-page" element={<ProfilePage />} />
-      <Route path="/register-page" element={<RegisterPage />} />
-      <Route path="*" element={<Navigate to="/index" replace />} />
+
+      <Route path="/Histoire" element={<Histoire />} />
+      <Route path="/Departement" element={<Departement />} />
+      <Route path="/DepInfo" element={<DepInfo />} />
+      <Route path="/DepMath" element={<DepMath />} />
+      <Route path="/DepTech" element={<DepTech />} />
+      <Route path="/Formationdepinfo" element={<Formationdepinfo />} />
+      <Route path="/Formationdepmath" element={<Formationdepmath />} />
+
+      <Route path="/etudiant/*" element={<Etudiant />} />
+      <Route path="/professeur/*" element={<Professeur />} />
+
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   </BrowserRouter>
 );

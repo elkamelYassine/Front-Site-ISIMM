@@ -18,7 +18,7 @@
       }
   }
 
-  &.show .dropdown-menu{
+  &.show > .dropdown-menu{
       @include opacity(1);
       visibility: visible;
 

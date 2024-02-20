@@ -49,7 +49,7 @@
             text-transform: uppercase;
             font-weight: 600;
             color: $default-color;
-
+            
             p {
               margin: 0px 0px;
               text-transform: uppercase;
@@ -59,7 +59,8 @@
               padding: 15px 0;
             }
          }
-        .nav-item .nav-link.btn {
+
+         .nav-item .nav-link.btn {
             margin: $navbar-margin-a-btn;
             padding: 9px;
 
@@ -145,6 +146,7 @@
         color: $white-color;
       }
 
+
       .navbar-nav {
         .nav-item .nav-link {
           color: $white-color;
@@ -196,7 +198,12 @@
         margin: 0 auto;
       }
     }
-}
+
+    .dropdown-menu {
+      .dropdown-toggle {
+        padding :20px 20px  !important;
+      }}
+  }
 
 .navbar-transparent, [class*="bg"]{
     .navbar-brand{
@@ -212,10 +219,12 @@
     }
 
     .navbar-nav{
-        .nav-item .nav-link:not(.btn){
+ 
+      .nav-item .nav-link:not(.btn){
             color: $white-color;
             border-color: $white-color;
         }
+        
         .active .nav-link
         .active .nav-link:hover,
         .active .nav-link:focus,
@@ -243,7 +252,17 @@
             color: $default-color;
             @include opacity(1);
         }
-    }
+        .dropdown-menu {
+          .dropdown-toggle {
+              color: $default-color !important;// Change this to your desired color
+              // Add other styles as needed...
+          
+              
+            }
+
+      }
+    
+      }
 
     .btn-default.btn-fill{
         color: $dark-gray;

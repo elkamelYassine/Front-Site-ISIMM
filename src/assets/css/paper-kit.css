@@ -22,6 +22,10 @@
  * Copyright 2012-2013 Mattia Larentis
  * http://www.apache.org/licenses/LICENSE-2.0
  */
+ .Meduim-Image {
+  height: 200px;
+  width: 200px;
+ }
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -6119,6 +6123,7 @@ License - nucleoapp.com/license/
 .card-register {
   background-color: #ff8f5e;
   border-radius: 8px;
+  
   color: #fff;
   max-width: 350px;
   margin: 20px 0 70px;
