@@ -46,7 +46,7 @@ const DepTech = () => {
             <ul>
               <li>
                 <a
-                  href="/histoire"
+                  href="/Formationdeptech#section1"
                   style={{
                     fontWeight: "300",
                     color: "black",
@@ -59,7 +59,7 @@ const DepTech = () => {
               <br />
               <li>
                 <a
-                  href="/histoire"
+                  href="/Formationdeptech#section2"
                   style={{
                     fontWeight: "300",
                     color: "black",
@@ -72,7 +72,7 @@ const DepTech = () => {
               <br />
               <li>
                 <a
-                  href="/histoire"
+                  href="/Formationdeptech#section3"
                   style={{
                     fontWeight: "300",
                     color: "black",
@@ -86,7 +86,7 @@ const DepTech = () => {
               <br />
               <li>
                 <a
-                  href="/histoire"
+                  href="/Formationdeptech#section4"
                   style={{
                     fontWeight: "300",
                     color: "black",
@@ -99,7 +99,7 @@ const DepTech = () => {
               <br />
               <li>
                 <a
-                  href="/histoire"
+                  href="/Formationdeptech#section5"
                   style={{
                     fontWeight: "300",
                     color: "black",
@@ -112,7 +112,7 @@ const DepTech = () => {
               <br />
               <li>
                 <a
-                  href="/histoire"
+                  href="/Formationdeptech#section6"
                   style={{
                     fontWeight: "300",
                     color: "black",

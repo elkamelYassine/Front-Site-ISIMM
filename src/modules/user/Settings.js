@@ -1,36 +1,13 @@
 import React, { useState } from "react";
 
 // reactstrap components
-import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+import { Button } from "reactstrap";
 
 // core components
-import ConnectedNavbar from "modules/etudiant/Navbars/ConnectedNavbar.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import imageSource from "assets/img/user.png";
-function Settings() {
-  const [activeTab, setActiveTab] = React.useState("1");
-  const NameEtudiant = "Yassine EL Kamel";
-  const Niveau = "ING INFO 1";
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
+import PropTypes from "prop-types";
+function Settings({ NavBar }) {
   document.documentElement.classList.remove("nav-open");
 
   const [nom, setNom] = useState("");
@@ -46,7 +23,7 @@ function Settings() {
   });
   return (
     <>
-      <ConnectedNavbar changeColor={false} />
+      <NavBar changeColor={false} />
       <br />
       <br />
       <br />
@@ -149,5 +126,7 @@ function Settings() {
     </>
   );
 }
-
+Settings.propTypes = {
+  NavBar: PropTypes.elementType.isRequired,
+};
 export default Settings;

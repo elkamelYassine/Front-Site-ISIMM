@@ -4,11 +4,10 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import EtudiantMiniProfile from "./EtudiantMiniProfile";
 // core components
-import ConnectedNavbar from "modules/etudiant/Navbars/ConnectedNavbar.js";
-
 import DemoFooter from "components/Footers/DemoFooter.js";
-import imageSource from "assets/img/user.png";
-function Emploi() {
+import PropTypes from "prop-types";
+
+function Emploi({ NavBar }) {
   const [activeTab, setActiveTab] = React.useState("1");
   const NameEtudiant = "Yassine EL Kamel";
   const Niveau = "ING INFO 1";
@@ -28,8 +27,7 @@ function Emploi() {
   });
   return (
     <>
-      <ConnectedNavbar changeColor={false} />
-      <br />
+      <NavBar changeColor={false} />
       <br />
       <br />
       <br />
@@ -125,5 +123,7 @@ function Emploi() {
     </>
   );
 }
-
+Emploi.propTypes = {
+  NavBar: PropTypes.elementType.isRequired,
+};
 export default Emploi;

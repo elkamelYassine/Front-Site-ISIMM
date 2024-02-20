@@ -4,6 +4,7 @@ import classnames from "classnames";
 import ISIMMLogo from "assets/img/logoISIMM-MEDUIM2.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import useToken from "config/useToken";
 // reactstrap components
 import {
   Collapse,
@@ -17,8 +18,9 @@ import {
   Container,
 } from "reactstrap";
 import PropTypes from "prop-types";
-function ConnectedNavbar({ changeColor, color }) {
+function EtudiantNavbar({ changeColor, color }) {
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+  const { destroyToken } = useToken();
 
   const [direction, setDirection] = React.useState("right");
   let navigate = useNavigate();
@@ -186,7 +188,12 @@ function ConnectedNavbar({ changeColor, color }) {
                       Paramètre
                     </DropdownItem>
                   </Link>
-                  <DropdownItem>
+                  <DropdownItem
+                    onClick={(e) => {
+                      destroyToken();
+                      window.location.reload();
+                    }}
+                  >
                     <i class="nc-icon nc-button-power" />
                     Déconnecter
                   </DropdownItem>
@@ -198,10 +205,10 @@ function ConnectedNavbar({ changeColor, color }) {
       </Navbar>
     </StrictMode>
   );
-  ConnectedNavbar.prototype = {
+  EtudiantNavbar.prototype = {
     changeColor: PropTypes.bool.isRequired,
     color: PropTypes.string,
   };
 }
 
-export default ConnectedNavbar;
+export default EtudiantNavbar;

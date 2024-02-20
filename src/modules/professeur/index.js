@@ -4,12 +4,13 @@ import { Route, Routes } from "react-router-dom";
 import Emploi from "../user/Emploi";
 import Settings from "../user/Settings";
 import Profile from "../user/Profile";
+import professeurNavbar from "./Navbar/professeurNavbar";
+
 import useToken from "config/useToken";
 import RegisterPage from "views/examples/RegisterPage";
-import EtudiantNavbar from "modules/etudiant/Navbars/EtudiantNavbar.js";
 
-const EtudiantRoutes = () => {
-  const { setToken, isEtudiant } = useToken();
+const ProfessuerRoutes = () => {
+  /* const { setToken, isEtudiant } = useToken();*/
   /*const [loggedIn, setLoggedIn] = useState(isEtudiant());
   React.useEffect(() => {
     if (!loggedIn && token) destroyToken();
@@ -18,14 +19,14 @@ const EtudiantRoutes = () => {
     return <RegisterPage setToken={setToken} />;
   }*/
 
-   if (!isEtudiant()) return <RegisterPage setToken={setToken} />;
+  //  if (!isProfesseur()) return <RegisterPage setToken={setToken} />;
 
   return (
     <Routes>
-      <Route index element={<Profile NavBar={EtudiantNavbar} />} />
-      <Route path="emploi" element={<Emploi NavBar={EtudiantNavbar}/>} />
-      <Route path="settings" element={<Settings NavBar={EtudiantNavbar} />} />
+      <Route index element={<Profile NavBar={professeurNavbar} />} />
+      <Route path="emploi" element={<Emploi NavBar={professeurNavbar} />} />
+      <Route path="settings" element={<Settings NavBar={professeurNavbar} />} />
     </Routes>
   );
 };
-export default EtudiantRoutes;
+export default ProfessuerRoutes;

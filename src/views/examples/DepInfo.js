@@ -43,11 +43,11 @@ const DepInfo = () => {
             <Row>Formations en relation:</Row></h3>
         </div>
         <ul>
-        <li><a href="/histoire" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Licence Sciences de l’Informatique</a></li><br/>
-        <li><a href="/histoire" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Master de recherche en génie logiciel</a></li><br/>
-        <li><a href="/histoire" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Master professionnel en génie logiciel</a></li><br/>
-        <li><a href="/histoire" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Préparatoire intégré en Informatique</a></li><br/>
-        <li><a href="/histoire" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Ingénieurs Informatique</a></li><br/>
+        <li><a href="/Formationdepinfo#section1" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Licence Sciences de l’Informatique</a></li><br/>
+        <li><a href="/Formationdepinfo#section2" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Master de recherche en génie logiciel</a></li><br/>
+        <li><a href="/Formationdepinfo#section3"style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Master professionnel en génie logiciel</a></li><br/>
+        <li><a href="/Formationdepinfo#section4" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Préparatoire intégré en Informatique</a></li><br/>
+        <li><a href="/Formationdepinfo#section5" style={{fontWeight:"300",color:"black",fontSize:"18px"}}>Ingénieurs Informatique</a></li><br/>
         </ul>
         <div className="title">
             <h3 style={{fontWeight:'300'}}>

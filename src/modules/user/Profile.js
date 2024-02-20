@@ -17,23 +17,13 @@ import {
 } from "reactstrap";
 
 // core components
-import ConnectedNavbar from "modules/etudiant/Navbars/ConnectedNavbar.js";
-import ProfilePageHeader from "./Headers/ProfilePageHeader.js";
+import ProfilePageHeader from "../etudiant/Headers/ProfilePageHeader.js";
 import SectionCards from "views/index-sections/SectionCards.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import imageSource from "assets/img/user.png";
-import imageHeader from "assets/img/etudiant.jpg";
-function Profile() {
-  const [activeTab, setActiveTab] = React.useState("1");
-  const NameEtudiant = "Yassine EL Kamel";
-  const Niveau = "ING INFO 1";
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
+import RegisterPage from "views/examples/RegisterPage.js";
+import PropTypes from "prop-types";
+function Profile({ NavBar }) {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -41,9 +31,19 @@ function Profile() {
       document.body.classList.remove("landing-page");
     };
   });
+  const [activeTab, setActiveTab] = React.useState("1");
+
+  const NameEtudiant = "Yassine EL Kamel";
+  const Niveau = "ING INFO 1";
+  const toggle = (tab) => {
+    if (activeTab !== tab) {
+      setActiveTab(tab);
+    }
+  };
+
   return (
     <>
-      <ConnectedNavbar changeColor={true} />
+      <NavBar changeColor={true} />
       <ProfilePageHeader />
       <div className="section profile-content">
         <Container>
@@ -74,4 +74,7 @@ function Profile() {
   );
 }
 
+Profile.propTypes = {
+  NavBar: PropTypes.elementType.isRequired,
+};
 export default Profile;

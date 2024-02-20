@@ -5,7 +5,7 @@ import imageSource from "assets/img/user.png";
 const EtudiantMiniProfile = () => {
   const NameEtudiant = "Yassine EL Kamel";
   const Niveau = "ING INFO 1";
-
+  const role = "Professuer";
   return (
     <div className="main">
       <Container>
@@ -22,7 +22,7 @@ const EtudiantMiniProfile = () => {
             <h3>{NameEtudiant}</h3>
             <br />
             <h5>{Niveau}</h5>
-            <h6 className="description">Etudiant</h6>
+            <h6 className="description">{role}</h6>
           </Col>
         </Row>
       </Container>

@@ -20,12 +20,18 @@ import Departement from "views/examples/Departement";
 import DepInfo from "views/examples/DepInfo";
 import DepMath from "views/examples/DepMath";
 import DepTech from "views/examples/DepTech";
+import Formationdepinfo from "views/examples/Formationdepinfo";
+import Formationdepmath from "views/examples/Formationdepmath";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const loading = <div>loading ...</div>;
 const Etudiant = Loadable({
   loader: () => import(/* webpackChunkName: "etudiant" */ "modules/etudiant"),
+  loading: () => loading,
+});
+const Professeur = Loadable({
+  loader: () => import(/* webpackChunkName: "etudiant" */ "modules/professeur"),
   loading: () => loading,
 });
 
@@ -36,14 +42,17 @@ root.render(
       <Route path="/index" element={<Index />} />
       <Route path="/nucleo-icons" element={<NucleoIcons />} />
       <Route path="/landing-page" element={<LandingPage />} />
-      <Route path="/login" element={<RegisterPage />} />
+
       <Route path="/Histoire" element={<Histoire />} />
       <Route path="/Departement" element={<Departement />} />
       <Route path="/DepInfo" element={<DepInfo />} />
       <Route path="/DepMath" element={<DepMath />} />
       <Route path="/DepTech" element={<DepTech />} />
+      <Route path="/Formationdepinfo" element={<Formationdepinfo />} />
+      <Route path="/Formationdepmath" element={<Formationdepmath />} />
 
       <Route path="/etudiant/*" element={<Etudiant />} />
+      <Route path="/professeur/*" element={<Professeur />} />
 
       <Route path="*" element={<PageNotFound />} />
     </Routes>

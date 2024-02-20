@@ -161,7 +161,9 @@ function IndexNavbar({ changeColor, color }) {
                       Cycle Ingenieur
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem>Informatique</DropdownItem>
+                      <Link to={"/Formationdepinfo#section5"}>
+                        <DropdownItem>Informatique</DropdownItem>
+                      </Link>
                       <DropdownItem>Electronique</DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
@@ -170,14 +172,52 @@ function IndexNavbar({ changeColor, color }) {
                       Master
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem>Master1 ...</DropdownItem>
-                      <DropdownItem>Master2 ...</DropdownItem>
+                      <Link to={"/Formationdepinfo#section2"}>
+                        <DropdownItem>
+                          Master de recherche en génie logiciel
+                        </DropdownItem>
+                      </Link>
+                      <Link to={"/Formationdepinfo#section3"}>
+                        <DropdownItem>
+                          Master professionnelle en genie logiciel
+                        </DropdownItem>
+                      </Link>
+                      <DropdownItem>
+                        Master professionnelle data science
+                      </DropdownItem>
+                      <DropdownItem>
+                        Master de recherche en microélectronique et
+                        instrumentation
+                      </DropdownItem>
+                      <DropdownItem>
+                        Master professionnelle ingénieurie en instrumentation
+                        industrielle
+                      </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
                   {/* Add more ISIMM items as needed */}
+                  <Link to={"/Formationdepinfo#section4"}>
+                    <DropdownItem>Cycle préparatoire</DropdownItem>
+                  </Link>
 
-                  <DropdownItem>Cycle préparatoire</DropdownItem>
-                  <DropdownItem>Licence</DropdownItem>
+                  <UncontrolledDropdown nav inNavbar direction={direction}>
+                    <DropdownToggle caret nav>
+                      Licence
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <Link to={"/Formationdepinfo#section1"}>
+                        <DropdownItem>
+                          Licence science de l'Informatique
+                        </DropdownItem>
+                      </Link>
+                      <DropdownItem>
+                        Licence mathématiques appliquées
+                      </DropdownItem>
+                      <DropdownItem>Licence TIC</DropdownItem>
+                      <DropdownItem>Licence EEA (SE)</DropdownItem>
+                      <DropdownItem>Licence EEA (MIM)</DropdownItem>
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
                 </DropdownMenu>
               </UncontrolledDropdown>
 
