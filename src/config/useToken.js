@@ -8,7 +8,6 @@ const useToken = () => {
     console.log(userToken);
 
     if (userToken) return userToken;
-    console.log("the token is null");
     return null;
   };
 
@@ -24,8 +23,6 @@ const useToken = () => {
     }
 
     const stringToken = userToken.id_token;
-    console.log("saveToken is called");
-
     // Store token along with expiration time
     if (getToken()) destroyToken();
 
@@ -34,19 +31,10 @@ const useToken = () => {
       secure: true, // Ensure secure transmission over HTTPS
     });
 
-    console.log("Token saved");
     setToken(stringToken);
   };
 
-  const reloadToken = () => {
-    setToken(Cookies.get("token"));
-  };
 
-  // Function to check if token is valid
-  const isValidToken = () => {
-    const token = getToken();
-    return token !== null; // If token is not null, it's considered valid
-  };
 
   const destroyToken = () => {
     // Clear token from cookies with secure and httpOnly flags
@@ -56,42 +44,18 @@ const useToken = () => {
   };
 
   const isEtudiant = () => {
-    // setToken(getToken());
-
     if (token) {
-      // Assuming the role is stored in the token as 'role'
       const role = jwtDecode(token).auth;
-
-      console.log(token);
-
-      console.log(role);
       return role.includes("ROLE_ETUDIANT");
-
-      /*if (role && Array.isArray(role)) {
-        console.log(role.includes("ROLE_ETUDIANT"));
-        return role.includes("ROLE_ETUDIANT");
-      }*/
     }
 
     return false; // Return false if token is null or undefined
   };
 
   const isProfesseur = () => {
-    // setToken(getToken());
-
     if (token) {
-      // Assuming the role is stored in the token as 'role'
       const role = jwtDecode(token).auth;
-
-      console.log(token);
-
-      console.log(role);
       return role.includes("ROLE_PROFESSOR");
-
-      /*if (role && Array.isArray(role)) {
-        console.log(role.includes("ROLE_ETUDIANT"));
-        return role.includes("ROLE_ETUDIANT");
-      }*/
     }
 
     return false; // Return false if token is null or undefined
@@ -100,7 +64,6 @@ const useToken = () => {
   return {
     saveToken,
     getToken,
-    isValidToken,
     destroyToken,
     isEtudiant,
     isProfesseur,

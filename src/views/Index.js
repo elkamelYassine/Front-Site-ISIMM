@@ -15,6 +15,8 @@ function Index() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("index");
+    window.scrollTo({ top: 0 });
+
     return function cleanup() {
       document.body.classList.remove("index");
     };

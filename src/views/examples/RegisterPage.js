@@ -35,7 +35,6 @@ function RegisterPage({ saveToken }) {
       username,
       password,
     });
-    console.log(token);
     saveToken(token);
   };
 
