@@ -4,7 +4,7 @@ import imageHeader from "assets/img/etudiant.jpg";
 
 // core components
 
-function ProfilePageHeader() {
+function ProfilePageHeaderEtud() {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -24,7 +24,8 @@ function ProfilePageHeader() {
     <>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/etudiant.jpg") + ")",
+          backgroundImage:
+            "url(" + require("assets/img/etudiant-banner.jpg") + ")",
         }}
         className="page-header page-header-xs"
         data-parallax={true}
@@ -36,4 +37,4 @@ function ProfilePageHeader() {
   );
 }
 
-export default ProfilePageHeader;
+export default ProfilePageHeaderEtud;

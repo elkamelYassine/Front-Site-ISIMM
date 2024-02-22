@@ -1,29 +1,15 @@
 import React from "react";
 
 // reactstrap components
-import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+import { Container } from "reactstrap";
 
 // core components
-import ProfilePageHeader from "../etudiant/Headers/ProfilePageHeader.js";
+
 import SectionCards from "views/index-sections/SectionCards.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import imageSource from "assets/img/user.png";
-import RegisterPage from "views/examples/RegisterPage.js";
 import PropTypes from "prop-types";
-function Profile({ NavBar }) {
+function Profile({ NavBar, ProfilePageHeader }) {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -31,15 +17,9 @@ function Profile({ NavBar }) {
       document.body.classList.remove("landing-page");
     };
   });
-  const [activeTab, setActiveTab] = React.useState("1");
 
   const NameEtudiant = "Yassine EL Kamel";
   const Niveau = "ING INFO 1";
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
 
   return (
     <>
@@ -76,5 +56,6 @@ function Profile({ NavBar }) {
 
 Profile.propTypes = {
   NavBar: PropTypes.elementType.isRequired,
+  ProfilePageHeader: PropTypes.elementType.isRequired,
 };
 export default Profile;

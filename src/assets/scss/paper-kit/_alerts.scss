@@ -4,7 +4,11 @@
     color: $white-color;
     padding: 10px 15px;
     font-size: 14px;
-
+    &.position100{
+        margin-left: auto !important;
+        margin-right: auto !important;
+        
+    }
     & .close{
         font-size: $font-size-large;
         color: $white-color;

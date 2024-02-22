@@ -3,13 +3,14 @@ import React from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
-import image1 from "assets/img/histoire-1.jpg";
+import image1 from "assets/img/isimmImg/IMG-20240222-WA0025.jpg";
 import { Container, Row, Col } from "reactstrap";
 
 const Histoire = () => {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("histoire");
+    window.scrollTo({ top: 0 });
     return function cleanup() {
       document.body.classList.remove("histoire");
     };

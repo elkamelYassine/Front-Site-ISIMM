@@ -1,23 +1,13 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 import EtudiantMiniProfile from "./EtudiantMiniProfile";
 // core components
 import DemoFooter from "components/Footers/DemoFooter.js";
 import PropTypes from "prop-types";
 
 function Emploi({ NavBar }) {
-  const [activeTab, setActiveTab] = React.useState("1");
-  const NameEtudiant = "Yassine EL Kamel";
-  const Niveau = "ING INFO 1";
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("landing-page");

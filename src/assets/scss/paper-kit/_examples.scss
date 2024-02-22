@@ -14,6 +14,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    
 
     .filter::after{
         background-color: rgba(0, 0, 0, 0.5);
@@ -39,6 +41,11 @@
         .category-absolute{
             z-index: 1;
         }
+    }
+
+    &.page-header-bottom{
+        background-position: center bottom;
+       
     }
 }
 .page-header .motto{
@@ -262,4 +269,7 @@
             height: 100%;
         }
     }
+}
+@media (max-width=769px){
+    .page-header{}
 }

@@ -6192,6 +6192,8 @@ License - nucleoapp.com/license/
   background-size: cover;
   min-height: 100vh;
   max-height: 999px;
+  width: flex;
+  height: flex;
   overflow: hidden;
   position: relative;
   width: 100%;
