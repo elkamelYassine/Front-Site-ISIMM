@@ -11,9 +11,20 @@ import RegisterPage from "views/examples/RegisterPage";
 import ProfilePageHeaderProf from "./Headers/ProfilePageHeaderProf";
 
 const ProfessuerRoutes = () => {
-  const { saveToken, isProfesseur } = useToken();
+  const { saveToken, isProfesseur, token } = useToken();
 
-  if (!isProfesseur()) return <RegisterPage saveToken={saveToken} />;
+  if (!isProfesseur() && token)
+    return (
+      <div>
+        <RegisterPage saveToken={saveToken} roleInvalide={true} />
+      </div>
+    );
+  if (!isProfesseur() && !token)
+    return (
+      <div>
+        <RegisterPage saveToken={saveToken} roleInvalide={false} />
+      </div>
+    );
 
   return (
     <Routes>

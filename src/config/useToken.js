@@ -19,7 +19,7 @@ const useToken = () => {
   const saveToken = (userToken) => {
     if (!userToken || !userToken.id_token) {
       console.error("Invalid user token");
-      return;
+      return false;
     }
 
     const stringToken = userToken.id_token;
@@ -32,9 +32,8 @@ const useToken = () => {
     });
 
     setToken(stringToken);
+    return true;
   };
-
-
 
   const destroyToken = () => {
     // Clear token from cookies with secure and httpOnly flags
@@ -64,6 +63,7 @@ const useToken = () => {
   return {
     saveToken,
     getToken,
+    token,
     destroyToken,
     isEtudiant,
     isProfesseur,

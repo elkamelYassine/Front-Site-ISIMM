@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-
 import Emploi from "../user/Emploi";
 import Settings from "../user/Settings";
 import Profile from "../user/Profile";
@@ -10,9 +9,19 @@ import EtudiantNavbar from "modules/etudiant/Navbars/EtudiantNavbar.js";
 import ProfilePageHeaderEtud from "./Headers/ProfilePageHeaderEtud";
 
 const EtudiantRoutes = () => {
-  const { saveToken, isEtudiant } = useToken();
-
-  if (!isEtudiant()) return <RegisterPage saveToken={saveToken} />;
+  const { saveToken, isEtudiant , token } = useToken();
+  if (!isEtudiant() && token)
+    return (
+      <div>
+        <RegisterPage saveToken={saveToken} roleInvalide={true} />
+      </div>
+    );
+    if (!isEtudiant() && !token)
+    return (
+      <div>
+        <RegisterPage saveToken={saveToken} roleInvalide={false} />
+      </div>
+    );
 
   return (
     <Routes>
