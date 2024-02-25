@@ -12,6 +12,8 @@ const Foyers = () => {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("Foyers");
+    window.scrollTo({ top: 0 });
+
     return function cleanup() {
       document.body.classList.remove("Foyers");
     };

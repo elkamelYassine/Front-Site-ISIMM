@@ -1,7 +1,6 @@
 import React from "react";
 import { Badge, Button, Container } from "reactstrap";
 import EtudiantNavbar from "../Navbars/EtudiantNavbar";
-import SectionButtons from "views/index-sections/SectionButtons";
 import EtudiantMiniProfile from "modules/user/EtudiantMiniProfile";
 import { PropTypes } from "prop-types";
 

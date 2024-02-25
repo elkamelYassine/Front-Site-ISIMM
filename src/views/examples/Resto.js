@@ -12,6 +12,8 @@ const Resto = () => {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("Resto");
+    window.scrollTo({ top: 0 });
+
     return function cleanup() {
       document.body.classList.remove("Resto");
     };

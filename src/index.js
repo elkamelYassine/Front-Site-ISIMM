@@ -10,8 +10,6 @@ import "assets/demo/demo.css?v=1.3.0";
 // pages
 
 import Index from "views/Index.js";
-import NucleoIcons from "views/NucleoIcons.js";
-import LandingPage from "views/examples/LandingPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import Histoire from "views/examples/Histoire.js";
 import PageNotFound from "views/examples/PageNotFound.js";
@@ -42,8 +40,6 @@ root.render(
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/index" element={<Index />} />
-      <Route path="/nucleo-icons" element={<NucleoIcons />} />
-      <Route path="/landing-page" element={<LandingPage />} />
 
       <Route path="/Histoire" element={<Histoire />} />
       <Route path="/Departement" element={<Departement />} />

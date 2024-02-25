@@ -11,6 +11,8 @@ import { Container, Row, Col } from "reactstrap";
 
 const DepMath = () => {
   document.documentElement.classList.remove("nav-open");
+  window.scrollTo({ top: 0 });
+
   React.useEffect(() => {
     document.body.classList.add("DepMath");
     return function cleanup() {
