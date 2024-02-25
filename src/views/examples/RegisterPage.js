@@ -44,10 +44,8 @@ function RegisterPage({ saveToken, roleInvalide }) {
 
   useEffect(() => {
     if (roleInvalide) {
-      setErrorMessage("Vous étes pas autorisé a cette section");
+      setErrorMessage("Vous avez pas l'accées a cette section");
       setUnvalideLogIn(true);
-    } else {
-      setErrorMessage("");
     }
   }, [unvalideLogIn, roleInvalide]);
 
@@ -61,7 +59,7 @@ function RegisterPage({ saveToken, roleInvalide }) {
       setErrorMessage("Username ou Password invalide");
       setUnvalideLogIn(true);
     } else if (roleInvalide) {
-      setErrorMessage("Vous étes pas autorisé a cette section");
+      setErrorMessage("Vous avez pas l'accées a cette section");
       setUnvalideLogIn(true);
     }
   };

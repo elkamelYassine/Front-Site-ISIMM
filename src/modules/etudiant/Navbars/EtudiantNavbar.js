@@ -114,9 +114,12 @@ function EtudiantNavbar({ changeColor, color }) {
                   Feuille adminestrative
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem>Certificat de présence</DropdownItem>
-
-                  <DropdownItem>Certificat de réussite</DropdownItem>
+                  <Link to="/etudiant/certificatpresence">
+                    <DropdownItem>Certificat de présence</DropdownItem>
+                  </Link>
+                  <Link to="/etudiant/certificatreussite">
+                    <DropdownItem>Certificat de réussite</DropdownItem>
+                  </Link>
                 </DropdownMenu>
               </UncontrolledDropdown>
 

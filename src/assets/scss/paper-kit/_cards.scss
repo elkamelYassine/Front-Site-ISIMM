@@ -14,6 +14,7 @@
     -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
     transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
 
+
     &:not(.card-plain):hover {
       box-shadow: 0px 12px 19px -7px rgba(0, 0, 0, 0.3);
       transform: translateY(-10px);
@@ -32,7 +33,10 @@
         -ms-transform: none;
         -moz-transform: none;
     }
-
+    &.card-meduim {
+     width: 20rem; 
+        margin-Left:1.5rem; 
+    }
     a:not(.btn){
         color: $black-hr;
 
