@@ -42,7 +42,7 @@ function IndexNavbar({ changeColor, color }) {
           document.body.scrollTop > 299) &&
         changeColor
       ) {
-        setNavbarColor("");
+        setNavbarColor("navbar-newColor");
       } else if (
         (document.documentElement.scrollTop < 300 ||
           document.body.scrollTop < 300) &&
@@ -122,9 +122,12 @@ function IndexNavbar({ changeColor, color }) {
                       Vie étudiant
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem>Foyers</DropdownItem>
-                      <DropdownItem>Restauration</DropdownItem>
-                      {/* Add more ISIMM items as needed */}
+                      <Link to={"/Foyers"}>
+                        <DropdownItem>Foyers</DropdownItem>
+                      </Link>
+                      <Link to={"/Resto"}>
+                        <DropdownItem>Restauration</DropdownItem>
+                      </Link>
                     </DropdownMenu>
                   </UncontrolledDropdown>
 

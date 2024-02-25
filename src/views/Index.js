@@ -36,7 +36,14 @@ function Index() {
               <CardApropos />
             </Col>
             <Col md="6" lg="6" sm="6">
-              <MapComponent />
+              <div className="title">
+                <h2>Map</h2>
+              </div>
+
+              <MapComponent
+                longitude={35.76440286851841}
+                latitude={10.840828573030606}
+              />
             </Col>
           </Row>
         </Container>

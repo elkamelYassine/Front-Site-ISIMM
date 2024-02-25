@@ -22,6 +22,8 @@ import DepMath from "views/examples/DepMath";
 import DepTech from "views/examples/DepTech";
 import Formationdepinfo from "views/examples/Formationdepinfo";
 import Formationdepmath from "views/examples/Formationdepmath";
+import Foyers from "views/examples/Foyers";
+import Resto from "views/examples/Resto";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -50,6 +52,8 @@ root.render(
       <Route path="/DepTech" element={<DepTech />} />
       <Route path="/Formationdepinfo" element={<Formationdepinfo />} />
       <Route path="/Formationdepmath" element={<Formationdepmath />} />
+      <Route path="/Foyers" element={<Foyers />} />
+      <Route path="/Resto" element={<Resto />} />
 
       <Route path="/etudiant/*" element={<Etudiant />} />
       <Route path="/professeur/*" element={<Professeur />} />

@@ -9,9 +9,11 @@ import {
 import "leaflet/dist/leaflet.css"; // Import the Leaflet CSS
 import { Container } from "reactstrap";
 import L from "leaflet";
+import PropTypes from "prop-types";
 
-const MapComponent = () => {
-  const center = [35.76440286851841, 10.840828573030606]; // Initial map center
+const MapComponent = ({ longitude, latitude }) => {
+  const position = [longitude, latitude];
+  const center = position; // Initial map center
 
   const myIcon = L.icon({
     iconUrl: require("leaflet/images/marker-icon.png"),
@@ -25,21 +27,17 @@ const MapComponent = () => {
 
   const markers = [
     {
-      position: [35.76440286851841, 10.840828573030606],
+      position: position,
       content: "ISIMM location",
     },
 
     // Add more markers as needed
   ];
-  const position = [35.76440286851841, 10.840828573030606];
 
   return (
     <>
       <div className="section ">
         <Container>
-          <div className="title">
-            <h2>Map</h2>
-          </div>
           <br />
           <div style={{ marginRight: "50%", marginLeft: "10%" }}>
             <MapContainer
@@ -60,6 +58,11 @@ const MapComponent = () => {
       </div>
     </>
   );
+};
+
+MapComponent.propTypes = {
+  longitude: PropTypes.number.isRequired,
+  latitude: PropTypes.number.isRequired,
 };
 
 export default MapComponent;

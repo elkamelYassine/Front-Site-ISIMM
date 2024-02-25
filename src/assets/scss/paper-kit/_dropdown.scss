@@ -62,7 +62,7 @@
     }
 
     .dropdown-item{
-        color: $font-color;
+        color: $primary-color;
         font-size: $font-size-base;
         padding: 10px 45px 10px 15px;
         clear: both;
@@ -121,14 +121,13 @@
 
     .dropdown-item:hover,
     .dropdown-item:focus{
-        color: $white-color !important;
         opacity: 1;
         text-decoration: none;
 
     }
     .dropdown-item:hover,
     .dropdown-item:focus{
-        background-color: $default-color;
+        background-color: #e3f2fd;
     }
 
     &.dropdown-primary .dropdown-item:hover,

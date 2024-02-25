@@ -4,8 +4,6 @@ import Cookies from "js-cookie";
 const useToken = () => {
   const getToken = () => {
     const userToken = Cookies.get("token");
-    console.log("getToken is called");
-    console.log(userToken);
 
     if (userToken) return userToken;
     return null;
