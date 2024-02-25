@@ -7,16 +7,17 @@ import useToken from "config/useToken";
 import RegisterPage from "views/examples/RegisterPage";
 import EtudiantNavbar from "modules/etudiant/Navbars/EtudiantNavbar.js";
 import ProfilePageHeaderEtud from "./Headers/ProfilePageHeaderEtud";
+import Certif from "./components/certif";
 
 const EtudiantRoutes = () => {
-  const { saveToken, isEtudiant , token } = useToken();
+  const { saveToken, isEtudiant, token } = useToken();
   if (!isEtudiant() && token)
     return (
       <div>
         <RegisterPage saveToken={saveToken} roleInvalide={true} />
       </div>
     );
-    if (!isEtudiant() && !token)
+  if (!isEtudiant() && !token)
     return (
       <div>
         <RegisterPage saveToken={saveToken} roleInvalide={false} />
@@ -36,6 +37,14 @@ const EtudiantRoutes = () => {
       />
       <Route path="emploi" element={<Emploi NavBar={EtudiantNavbar} />} />
       <Route path="settings" element={<Settings NavBar={EtudiantNavbar} />} />
+      <Route
+        path="certificatpresence"
+        element={<Certif typeCertif="Certificat de présence" />}
+      />
+      <Route
+        path="certificatreussite"
+        element={<Certif typeCertif="Certificat de réussite" />}
+      />
     </Routes>
   );
 };

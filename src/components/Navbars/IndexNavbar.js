@@ -19,6 +19,11 @@ import PropTypes from "prop-types";
 function IndexNavbar({ changeColor, color }) {
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
   const [direction, setDirection] = React.useState("right");
+
+  function navigateTo(url) {
+    window.location.href = url;
+  }
+
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     if (direction == "right") setDirection("down");
@@ -161,9 +166,9 @@ function IndexNavbar({ changeColor, color }) {
                       Cycle Ingenieur
                     </DropdownToggle>
                     <DropdownMenu>
-                      <Link to={"/Formationdepinfo#section5"}>
+                      <a href="/Formationdepinfo#section5">
                         <DropdownItem>Informatique</DropdownItem>
-                      </Link>
+                      </a>
                       <DropdownItem>Electronique</DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
@@ -172,16 +177,16 @@ function IndexNavbar({ changeColor, color }) {
                       Master
                     </DropdownToggle>
                     <DropdownMenu>
-                      <Link to={"/Formationdepinfo#section2"}>
+                      <a href="/Formationdepinfo#section2">
                         <DropdownItem>
                           Master de recherche en génie logiciel
                         </DropdownItem>
-                      </Link>
-                      <Link to={"/Formationdepinfo#section3"}>
+                      </a>
+                      <a href="/Formationdepinfo#section3">
                         <DropdownItem>
                           Master professionnelle en genie logiciel
                         </DropdownItem>
-                      </Link>
+                      </a>
                       <DropdownItem>
                         Master professionnelle data science
                       </DropdownItem>
@@ -196,20 +201,20 @@ function IndexNavbar({ changeColor, color }) {
                     </DropdownMenu>
                   </UncontrolledDropdown>
                   {/* Add more ISIMM items as needed */}
-                  <Link to={"/Formationdepinfo#section4"}>
+                  <a href="/Formationdepinfo#section4">
                     <DropdownItem>Cycle préparatoire</DropdownItem>
-                  </Link>
+                  </a>
 
                   <UncontrolledDropdown nav inNavbar direction={direction}>
                     <DropdownToggle caret nav>
                       Licence
                     </DropdownToggle>
                     <DropdownMenu>
-                      <Link to={"/Formationdepinfo#section1"}>
+                      <a href="/Formationdepinfo#section1">
                         <DropdownItem>
                           Licence science de l'Informatique
                         </DropdownItem>
-                      </Link>
+                      </a>
                       <DropdownItem>
                         Licence mathématiques appliquées
                       </DropdownItem>
@@ -251,10 +256,9 @@ function IndexNavbar({ changeColor, color }) {
       </Navbar>
     </StrictMode>
   );
-  IndexNavbar.prototype = {
-    changeColor: PropTypes.bool.isRequired,
-    color: PropTypes.string,
-  };
 }
-
+IndexNavbar.prototype = {
+  changeColor: PropTypes.bool.isRequired,
+  color: PropTypes.string,
+};
 export default IndexNavbar;

@@ -27,7 +27,7 @@ const useToken = () => {
     if (getToken()) destroyToken();
 
     Cookies.set("token", stringToken, {
-      expires: 1, // Set expiration in hours (here, 1 hour)
+      expires: null, // Set expiration in hours (here, 1 hour)
       secure: true, // Ensure secure transmission over HTTPS
     });
 

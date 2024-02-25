@@ -46,8 +46,6 @@ function RegisterPage({ saveToken, roleInvalide }) {
     if (roleInvalide) {
       setErrorMessage("Vous avez pas l'accées a cette section");
       setUnvalideLogIn(true);
-    } else {
-      setErrorMessage("");
     }
   }, [unvalideLogIn, roleInvalide]);
 
