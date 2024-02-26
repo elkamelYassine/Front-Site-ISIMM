@@ -458,7 +458,7 @@
             }
             & > .nav-link{
                 margin: 0px 0px;
-                color: $dark-gray !important;
+                color: $primary-color !important;
                 text-transform: uppercase;
                 font-weight: 600;
                 font-size: $font-size-small;
@@ -466,7 +466,7 @@
                 padding: 15px 0;
                 &:hover,
                 &:active{
-                    color: $default-states-color !important;
+                    color: $primary-states-color!important;
                 }
             }
         }
