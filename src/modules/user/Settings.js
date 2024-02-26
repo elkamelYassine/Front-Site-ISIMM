@@ -16,9 +16,11 @@ function Settings({ NavBar }) {
   const [email, setEmail] = useState("");
 
   React.useEffect(() => {
-    document.body.classList.add("landing-page");
+    window.scrollTo({ top: 0 });
+
+    document.body.classList.add("Settings");
     return function cleanup() {
-      document.body.classList.remove("landing-page");
+      document.body.classList.remove("Settings");
     };
   });
   return (

@@ -3,6 +3,7 @@ import { Badge, Button, Container } from "reactstrap";
 import EtudiantNavbar from "../Navbars/EtudiantNavbar";
 import EtudiantMiniProfile from "modules/user/EtudiantMiniProfile";
 import { PropTypes } from "prop-types";
+import DemoFooter from "components/Footers/DemoFooter";
 
 function Certif({ typeCertif }) {
   return (
@@ -56,6 +57,10 @@ function Certif({ typeCertif }) {
           </Button>
         </Container>
       </div>
+      <br />
+      <br />
+      <br />
+      <DemoFooter />
     </>
   );
 }

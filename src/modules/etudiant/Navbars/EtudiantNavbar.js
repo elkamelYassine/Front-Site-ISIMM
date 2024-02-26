@@ -114,6 +114,10 @@ function EtudiantNavbar({ changeColor, color }) {
                   Feuille adminestrative
                 </DropdownToggle>
                 <DropdownMenu>
+                  <Link to="https://www.inscription.tn/">
+                    <DropdownItem>Inscription</DropdownItem>
+                  </Link>
+
                   <Link to="/etudiant/certificatpresence">
                     <DropdownItem>Certificat de présence</DropdownItem>
                   </Link>
