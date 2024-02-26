@@ -5,7 +5,13 @@ import tree from "assets/img/cards/tree.jpg";
 import biblio from "assets/img/cards/biblio.jpg";
 import court2 from "assets/img/cards/court2.jpg";
 import salle from "assets/img/cards/salle.jpg";
+import ActualitePage from "views/examples/ActualitePage";
+import Actualite from "views/examples/Actualite";
 const SectionCards = () => {
+  const id = "1";
+
+  const { actualities } = Actualite();
+  actualities.map((actualitie) => console.log(actualitie.picture));
   return (
     <>
       <div className="section">
@@ -17,31 +23,14 @@ const SectionCards = () => {
           </div>
 
           <Row>
-            <Cards
-              title="Actualité 1"
-              description="Some quick example text to build on the card title and make up the bulk of the card's content."
-              imageSrc={tree}
-              link=""
-            />
-
-            <Cards
-              title="Actualité 2"
-              description="Some quick example text to build on the card title and make up the bulk of the card's content."
-              imageSrc={biblio}
-              link=""
-            />
-            <Cards
-              title="Actualité 3"
-              description="Some quick example text to build on the card title and make up the bulk of the card's content."
-              imageSrc={salle}
-              link=""
-            />
-            <Cards
-              title="Actualité 4"
-              description="Some quick example text to build on the card title and make up the bulk of the card's content."
-              imageSrc={court2}
-              link=""
-            />
+            {actualities.map((actualitie) => (
+              <Cards
+                title={actualitie.title}
+                description={actualitie.description}
+                imageSrc={actualitie.picture}
+                link={`/actualitie/${actualitie.id}`}
+              />
+            ))}
           </Row>
         </Container>
       </div>
