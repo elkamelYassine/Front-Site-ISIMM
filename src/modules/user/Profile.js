@@ -12,6 +12,8 @@ import PropTypes from "prop-types";
 function Profile({ NavBar, ProfilePageHeader }) {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
+    window.scrollTo({ top: 0 });
+
     document.body.classList.add("landing-page");
     return function cleanup() {
       document.body.classList.remove("landing-page");
