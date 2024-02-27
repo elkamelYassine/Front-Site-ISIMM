@@ -8,6 +8,7 @@ import Actualite from "./Actualite";
 import { useParams } from "react-router-dom";
 
 import tree from "assets/img/cards/tree.jpg";
+import SectionCards from "views/index-sections/SectionCards";
 
 const ActualitePage = () => {
   const [actuality, setActuality] = useState(null);
@@ -68,6 +69,8 @@ const ActualitePage = () => {
             <h3>{title}</h3>
           </div>
           <div className="Contenu ">{data}</div>
+          <br />
+          <SectionCards />
         </Container>
         <br />
       </div>

@@ -11,6 +11,7 @@ import CardApropos from "./index-sections/CardApropos";
 import MapComponent from "views/index-sections/MapComponent.js";
 import SectionCards from "views/index-sections/SectionCards.js";
 import { Row, Col, Container } from "reactstrap";
+import TotalCustomers from "./examples/TotalCustomers";
 function Index() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -27,6 +28,8 @@ function Index() {
       <IndexHeader />
       <div className="main">
         <br />
+
+        <TotalCustomers />
         <SectionCards />
         <br />
         <br />
