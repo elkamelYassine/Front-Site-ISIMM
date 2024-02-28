@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardBody, CardImg, CardTitle } from "reactstrap";
+import { Card, CardBody } from "reactstrap";
 
-const CardCounter = ({ endNumber, title, image ,intervalDuration}) => {
+const CardCounter = ({ endNumber, title, image, intervalDuration }) => {
   const [count, setCount] = useState(0);
-
 
   useEffect(() => {
     const interval = setInterval(() => {

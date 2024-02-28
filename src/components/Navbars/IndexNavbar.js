@@ -172,7 +172,9 @@ function IndexNavbar({ changeColor, color }) {
                       <a href="/Formationdepinfo#section5">
                         <DropdownItem>Informatique</DropdownItem>
                       </a>
-                      <DropdownItem>Electronique</DropdownItem>
+                      <a href="/Formationdeptech#section5">
+                        <DropdownItem>Electronique</DropdownItem>
+                      </a>
                     </DropdownMenu>
                   </UncontrolledDropdown>
                   <UncontrolledDropdown nav inNavbar direction={direction}>
