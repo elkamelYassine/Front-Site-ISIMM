@@ -23,6 +23,7 @@ import Formationdepmath from "views/examples/Formationdepmath";
 import Foyers from "views/examples/Foyers";
 import Resto from "views/examples/Resto";
 import ActualitePage from "views/examples/ActualitePage";
+import Formationdeptech from "views/examples/Formationdeptech";
 // others
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -49,6 +50,8 @@ root.render(
       <Route path="/DepTech" element={<DepTech />} />
       <Route path="/Formationdepinfo" element={<Formationdepinfo />} />
       <Route path="/Formationdepmath" element={<Formationdepmath />} />
+      <Route path="/Formationdeptech" element={<Formationdeptech />} />
+
       <Route path="/Foyers" element={<Foyers />} />
       <Route path="/Resto" element={<Resto />} />
       <Route path="/actualitie/:actualitieId" element={<ActualitePage />} />

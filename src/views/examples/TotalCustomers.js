@@ -1,10 +1,8 @@
-import { Divider, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 
-import { Card, CardBody, CardText, CardTitle, Container } from "reactstrap";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { Container } from "reactstrap";
 import CardCounter from "./CardCounter";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import stat_student from "assets/img/stats/stat_student.png";
 import stat_teachers from "assets/img/stats/stat_teachers.png";
 import stat_admin from "assets/img/stats/stat_admin.png";
