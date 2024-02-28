@@ -59,15 +59,12 @@ const ActualitePage = () => {
         <br />
         <Container>
           <div className="title">
-            <h2>Actualite</h2>
+            <h2>{title}</h2>
           </div>
 
           <center>
             <img src={picture} alt={title} height="490px" />
           </center>
-          <div className="title">
-            <h3>{title}</h3>
-          </div>
           <div className="Contenu ">{data}</div>
           <br />
           <SectionCards />

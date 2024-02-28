@@ -18,7 +18,7 @@ const SectionCards = () => {
         <Container>
           <div className="title">
             <h2>
-              <Row>Actualités</Row>
+              <Row>A LA UNE</Row>
             </h2>
           </div>
 
