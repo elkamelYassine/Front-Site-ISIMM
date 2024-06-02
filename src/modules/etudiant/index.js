@@ -11,6 +11,7 @@ import Certif from "./components/certif";
 
 const EtudiantRoutes = () => {
   const { saveToken, isEtudiant, token } = useToken();
+  const fonction = "Etudiant";
   if (!isEtudiant() && token)
     return (
       <div>
@@ -32,18 +33,30 @@ const EtudiantRoutes = () => {
           <Profile
             NavBar={EtudiantNavbar}
             ProfilePageHeader={ProfilePageHeaderEtud}
+            token={token}
+            fonction={fonction}
           />
         }
       />
-      <Route path="emploi" element={<Emploi NavBar={EtudiantNavbar} />} />
-      <Route path="settings" element={<Settings NavBar={EtudiantNavbar} />} />
+      <Route
+        path="emploi"
+        element={
+          <Emploi NavBar={EtudiantNavbar} token={token} fonction={fonction} />
+        }
+      />
+      <Route
+        path="settings"
+        element={
+          <Settings NavBar={EtudiantNavbar} token={token} fonction={fonction} />
+        }
+      />
       <Route
         path="certificatpresence"
-        element={<Certif typeCertif="Certificat de présence" />}
+        element={<Certif typeCertif="Certificat de présence" token={token} />}
       />
       <Route
         path="certificatreussite"
-        element={<Certif typeCertif="Certificat de réussite" />}
+        element={<Certif typeCertif="Certificat de réussite" token={token} />}
       />
     </Routes>
   );

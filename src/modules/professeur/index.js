@@ -12,7 +12,7 @@ import ProfilePageHeaderProf from "./Headers/ProfilePageHeaderProf";
 
 const ProfessuerRoutes = () => {
   const { saveToken, isProfesseur, token } = useToken();
-
+  const fonction = "Professeur";
   if (!isProfesseur() && token)
     return (
       <div>
@@ -34,11 +34,27 @@ const ProfessuerRoutes = () => {
           <Profile
             NavBar={professeurNavbar}
             ProfilePageHeader={ProfilePageHeaderProf}
+            token={token}
+            fonction={fonction}
           />
         }
       />
-      <Route path="emploi" element={<Emploi NavBar={professeurNavbar} />} />
-      <Route path="settings" element={<Settings NavBar={professeurNavbar} />} />
+      <Route
+        path="emploi"
+        element={
+          <Emploi NavBar={professeurNavbar} token={token} fonction={fonction} />
+        }
+      />
+      <Route
+        path="settings"
+        element={
+          <Settings
+            NavBar={professeurNavbar}
+            token={token}
+            fonction={fonction}
+          />
+        }
+      />
     </Routes>
   );
 };

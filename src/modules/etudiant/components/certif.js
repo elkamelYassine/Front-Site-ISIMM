@@ -5,7 +5,8 @@ import EtudiantMiniProfile from "modules/user/EtudiantMiniProfile";
 import { PropTypes } from "prop-types";
 import DemoFooter from "components/Footers/DemoFooter";
 
-function Certif({ typeCertif }) {
+function Certif({ typeCertif, token }) {
+  const fonction = "Etudiant";
   return (
     <>
       <EtudiantNavbar changeColor={false} />
@@ -18,7 +19,7 @@ function Certif({ typeCertif }) {
       <br /> <br />
       <div className="main">
         <Container>
-          <EtudiantMiniProfile />
+          <EtudiantMiniProfile token={token} fonction={fonction} />
           <h1 className="title text-primary">{typeCertif} </h1>
           <br />
 
@@ -66,5 +67,6 @@ function Certif({ typeCertif }) {
 }
 Certif.propTypes = {
   typeCertif: PropTypes.string.isRequired,
+  token: PropTypes.string,
 };
 export default Certif;

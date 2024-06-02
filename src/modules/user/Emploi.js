@@ -7,7 +7,7 @@ import EtudiantMiniProfile from "./EtudiantMiniProfile";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import PropTypes from "prop-types";
 
-function Emploi({ NavBar }) {
+function Emploi({ NavBar, token, fonction }) {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -27,7 +27,7 @@ function Emploi({ NavBar }) {
       <br /> <br />
       <div className="main">
         <Container>
-          <EtudiantMiniProfile />
+          <EtudiantMiniProfile token={token} fonction={fonction} />
           <center>
             <h1 className="title text-primary">Emploi du temps </h1>
           </center>
@@ -115,5 +115,7 @@ function Emploi({ NavBar }) {
 }
 Emploi.propTypes = {
   NavBar: PropTypes.elementType.isRequired,
+  token: PropTypes.string,
+  fonction: PropTypes.string,
 };
 export default Emploi;

@@ -27,7 +27,7 @@ const SectionCards = () => {
               <Cards
                 title={actualitie.title}
                 description={actualitie.description}
-                imageSrc={actualitie.picture}
+                imageSrc={`data:image/png;base64,${actualitie.image}`}
                 link={`/actualitie/${actualitie.id}`}
               />
             ))}

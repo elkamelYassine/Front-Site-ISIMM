@@ -3,9 +3,19 @@ import biblio from "assets/img/cards/biblio.jpg";
 import court from "assets/img/cards/court.jpg";
 import court2 from "assets/img/cards/court2.jpg";
 import salle from "assets/img/cards/salle.jpg";
-
+import React, { useEffect, useState } from "react";
 function Actualite() {
-  const actualities = [
+  const [actualities, setActualities] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:8080/api/actulaites");
+      const jsonData = await response.json();
+      setActualities(jsonData);
+    };
+
+    fetchData();
+  }, []);
+  /* const actualities = [
     {
       id: 1,
       title: "Actuality 1 Title",
@@ -42,6 +52,17 @@ function Actualite() {
       picture: salle, // Replace with your image URL
     },
   ];
+*/
+
+  /*const actualities = fetch("http://localhost:8080/api/actulaites", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(),
+  }).then((data) => data.json());*/
+
+  console.log(actualities);
   return {
     actualities,
   };

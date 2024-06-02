@@ -52,7 +52,8 @@ const useToken = () => {
   const isProfesseur = () => {
     if (token) {
       const role = jwtDecode(token).auth;
-      return role.includes("ROLE_PROFESSOR");
+      console.log(role);
+      return role.includes("ROLE_PROFESSEUR");
     }
 
     return false; // Return false if token is null or undefined

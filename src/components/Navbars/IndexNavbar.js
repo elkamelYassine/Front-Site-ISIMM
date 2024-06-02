@@ -192,17 +192,23 @@ function IndexNavbar({ changeColor, color }) {
                           Master professionnelle en genie logiciel
                         </DropdownItem>
                       </a>
-                      <DropdownItem>
-                        Master professionnelle data science
-                      </DropdownItem>
-                      <DropdownItem>
-                        Master de recherche en microélectronique et
-                        instrumentation
-                      </DropdownItem>
-                      <DropdownItem>
-                        Master professionnelle ingénieurie en instrumentation
-                        industrielle
-                      </DropdownItem>
+                      <a href="/Formationdepmath#section2">
+                        <DropdownItem>
+                          Master professionnelle data science
+                        </DropdownItem>
+                      </a>
+                      <a href="/Formationdeptech#section4">
+                        <DropdownItem>
+                          Master de recherche en microélectronique et
+                          instrumentation
+                        </DropdownItem>
+                      </a>
+                      <a href="/Formationdeptech#section6">
+                        <DropdownItem>
+                          Master professionnelle ingénieurie en instrumentation
+                          industrielle
+                        </DropdownItem>
+                      </a>
                     </DropdownMenu>
                   </UncontrolledDropdown>
                   {/* Add more ISIMM items as needed */}
@@ -220,12 +226,20 @@ function IndexNavbar({ changeColor, color }) {
                           Licence science de l'Informatique
                         </DropdownItem>
                       </a>
-                      <DropdownItem>
-                        Licence mathématiques appliquées
-                      </DropdownItem>
-                      <DropdownItem>Licence TIC</DropdownItem>
-                      <DropdownItem>Licence EEA (SE)</DropdownItem>
-                      <DropdownItem>Licence EEA (MIM)</DropdownItem>
+                      <a href="/Formationdepmath#section1">
+                        <DropdownItem>
+                          Licence mathématiques appliquées
+                        </DropdownItem>
+                      </a>
+                      <a href="/Formationdeptech#section1">
+                        <DropdownItem>Licence TIC</DropdownItem>
+                      </a>
+                      <a href="/Formationdepmath#section2">
+                        <DropdownItem>Licence EEA (SE)</DropdownItem>
+                      </a>
+                      <a href="/Formationdepmath#section3">
+                        <DropdownItem>Licence EEA (MIM)</DropdownItem>
+                      </a>
                     </DropdownMenu>
                   </UncontrolledDropdown>
                 </DropdownMenu>
